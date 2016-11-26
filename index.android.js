@@ -10,7 +10,7 @@ import CustomButtonPractice from './src/CustomButtonPractice';
 import NavigatorPractice from './src/NavigatorPractice';
 
 //comment out following one line to run custom button practice
-//AppRegistry.registerComponent('myRNPractices', () => CustomButtonPractice);
+AppRegistry.registerComponent('myRNPractices', () => CustomButtonPractice);
 
 //comment out following one line to run custom navigator practice
-AppRegistry.registerComponent('myRNPractices', () => NavigatorPractice);
+//AppRegistry.registerComponent('myRNPractices', () => NavigatorPractice);

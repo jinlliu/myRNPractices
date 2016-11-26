@@ -5,6 +5,8 @@ import {
   View
 } from 'react-native';
 
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 import Button from './components/customButton/Button';
 
 export default class CustomButtonPractice extends Component {
@@ -38,6 +40,7 @@ export default class CustomButtonPractice extends Component {
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
+        <Icon name="rocket" size={30} color="#900" style={styles.icon} />
         <Button text = 'OK' onPress ={this.onPress} />
         <Button ref = 'btnRef' text = 'Ref' onPress ={this.onRef} />
       </View>
@@ -62,4 +65,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  icon: {
+    marginTop: 100,
+  }
 });
