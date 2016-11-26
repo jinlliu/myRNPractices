@@ -11,6 +11,10 @@ Please reference this to [get start with React Native](http://facebook.github.io
 Please go to index.android.js(index.iso.js) to change to run.
 
 run navigator example:
-import NavigatorPractice from './src/NavigatorPractice';
+<pre>
+	<code>
+		import NavigatorPractice from './src/NavigatorPractice';
 
-AppRegistry.registerComponent('myRNStudy', () => NavigatorPractice);
+		AppRegistry.registerComponent('myRNStudy', () => NavigatorPractice);
+	</code>	
+</pre>
