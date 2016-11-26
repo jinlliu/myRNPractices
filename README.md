@@ -12,9 +12,9 @@ Please go to index.android.js(index.iso.js) to change to run.
 
 run navigator example:
 <pre>
-	<code>
-		import NavigatorPractice from './src/NavigatorPractice';
+<code>
+import NavigatorPractice from './src/NavigatorPractice';
 
-		AppRegistry.registerComponent('myRNStudy', () => NavigatorPractice);
-	</code>	
+AppRegistry.registerComponent('myRNStudy', () => NavigatorPractice);
+</code>	
 </pre>
