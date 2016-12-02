@@ -18,3 +18,14 @@ import NavigatorPractice from './src/NavigatorPractice';
 AppRegistry.registerComponent('myRNStudy', () => NavigatorPractice);
 </code>	
 </pre>
+
+Third party component list:
+<p>Tabnavigator:</p>
+*[react-native-tab-navigator](https://www.npmjs.com/package/react-native-tab-navigator)
+*[react-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons)
+<p>Hackathon</p>
+This practice need to call a REST micro service which defined with Spring Boot.
+*[react-native-camera](https://www.npmjs.com/package/react-native-camera)
+*[react-native-image-picker](https://www.npmjs.com/package/react-native-image-picker)
+*[react-native-image-resizer](https://www.npmjs.com/package/react-native-image-resizer)
+*[react-native-star-rating](https://www.npmjs.com/package/react-native-star-rating)
