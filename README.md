@@ -20,10 +20,10 @@ AppRegistry.registerComponent('myRNStudy', () => NavigatorPractice);
 </pre>
 
 Third party component list:
-+ Tabnavigator
+++ Tabnavigator
 * [react-native-tab-navigator](https://www.npmjs.com/package/react-native-tab-navigator)
 * [react-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons)
-+ Hackathon
+++ Hackathon
 This practice need to call a REST micro service which defined with Spring Boot.
 * [react-native-camera](https://www.npmjs.com/package/react-native-camera)
 * [react-native-image-picker](https://www.npmjs.com/package/react-native-image-picker)
