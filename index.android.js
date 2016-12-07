@@ -10,6 +10,7 @@ import CustomButtonPractice from './src/CustomButtonPractice';
 import NavigatorPractice from './src/NavigatorPractice';
 import TabNavigatorPractice from './src/TabNavigatorPractice';
 import VideoViewPractice from './src/VideoViewPractice';
+import WebViewPractice from './src/WebViewPractice';
 import HackathonPractice from './src/HackathonPractice';
 
 //comment out following one line to run custom button practice
@@ -24,5 +25,8 @@ import HackathonPractice from './src/HackathonPractice';
 //comment out following one line to run native videoview practice
 // AppRegistry.registerComponent('myRNPractices', () => VideoViewPractice);
 
+//comment out following one line to run native webview practice
+AppRegistry.registerComponent('myRNPractices', () => WebViewPractice);
+
 //comment out following one line to run hackathon practice
-AppRegistry.registerComponent('myRNPractices', () => HackathonPractice);
+//AppRegistry.registerComponent('myRNPractices', () => HackathonPractice);
