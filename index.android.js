@@ -11,6 +11,7 @@ import NavigatorPractice from './src/NavigatorPractice';
 import TabNavigatorPractice from './src/TabNavigatorPractice';
 import VideoViewPractice from './src/VideoViewPractice';
 import WebViewPractice from './src/WebViewPractice';
+import RTCWebViewPractice from './src/RTCWebViewPractice';
 import HackathonPractice from './src/HackathonPractice';
 
 //comment out following one line to run custom button practice
@@ -26,7 +27,10 @@ import HackathonPractice from './src/HackathonPractice';
 // AppRegistry.registerComponent('myRNPractices', () => VideoViewPractice);
 
 //comment out following one line to run native webview practice
-AppRegistry.registerComponent('myRNPractices', () => WebViewPractice);
+// AppRegistry.registerComponent('myRNPractices', () => WebViewPractice);
+
+//comment out following one line to run native rtcwebview practice
+AppRegistry.registerComponent('myRNPractices', () => RTCWebViewPractice);
 
 //comment out following one line to run hackathon practice
 //AppRegistry.registerComponent('myRNPractices', () => HackathonPractice);

@@ -11,6 +11,7 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.myrnpractices.components.VideoView.VideoViewPackage;
+import com.myrnpractices.components.WebView.ReactRTCWebViewPackage;
 import com.myrnpractices.components.WebView.ReactWebViewPackage;
 import com.myrnpractices.modules.OrientationPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -36,7 +37,8 @@ public class MainApplication extends Application implements ReactApplication {
             new VectorIconsPackage(),
               new OrientationPackage(),
               new VideoViewPackage(),
-              new ReactWebViewPackage()
+              new ReactWebViewPackage(),
+              new ReactRTCWebViewPackage()
       );
     }
   };

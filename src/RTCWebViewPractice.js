@@ -5,7 +5,7 @@ import {
   View
 } from 'react-native';
 
-import WebView from './components/nativeComponents/WebView';
+import RTCWebView from './components/nativeComponents/RTCWebView';
 
 export default class WebViewPractice extends Component { 
   render() {
@@ -15,12 +15,16 @@ export default class WebViewPractice extends Component {
           Welcome to React Native!
         </Text>
         <Text style={styles.instructions}>
-          This is a native component testing.
+          Android native component test.
         </Text>
-        <WebView url="https://www.baidu.com" style={styles.webview}></WebView>
+        <RTCWebView onScrollChange={this.onWebViewScroll} url="https://www.baidu.com" style={styles.webview}></RTCWebView>
       </View>
     );
   }
+
+  onWebViewScroll = (event)=>{
+    console.log(event);
+  };
 }
 
 const styles = StyleSheet.create({
