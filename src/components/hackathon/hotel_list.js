@@ -35,7 +35,7 @@ export default class HotelList extends Component {
         'Content-Type': 'application/json'
       }
     };
-    return fetch('http://szepc0cjfe3.sea.corp.expecn.com:8090/clarifai/search/hotelByTags',opts)
+    return fetch('http://localhost:8090/clarifai/search/hotelByTags',opts)
     .then((response)=>response.json())
     .then((responseJSON)=>{
       that.setState({hotels:responseJSON});
@@ -56,7 +56,7 @@ export default class HotelList extends Component {
         'Content-Type': 'application/json'
       }
     };
-    fetch('http://szepc0cjfe3.sea.corp.expecn.com:8090/clarifai/search/hotelByTags?tags='+tags.join(","),opts)
+    fetch('http://localhost:8090/clarifai/search/hotelByTags?tags='+tags.join(","),opts)
     .then((response)=>response.json())
     .then((responseJSON)=>{
       console.log(responseJSON);

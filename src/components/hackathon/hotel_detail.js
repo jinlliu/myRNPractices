@@ -41,7 +41,7 @@ export default class HotelDetail extends Component {
         'Content-Type': 'application/json'
       }
     };
-    return fetch('http://szepc0cjfe3.sea.corp.expecn.com:8090/clarifai/search/commentsByHotel?hotelId='+this.props.hotel.hotelId,opts)
+    return fetch('http://localhost:8090/clarifai/search/commentsByHotel?hotelId='+this.props.hotel.hotelId,opts)
     .then((response)=>response.json())
     .then((responseJSON)=>{
       that.setState({comments:responseJSON});

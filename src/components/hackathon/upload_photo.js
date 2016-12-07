@@ -36,7 +36,7 @@ export default class CameraApp extends Component {
           let options={};
           options.body = formData;
           options.method='post';
-          return fetch('http://szepc0cjfe3.sea.corp.expecn.com:8090/clarifai/rest/upload?htid='+this.props.hotel.hotelId,options)
+          return fetch('http://localhost:8090/clarifai/rest/upload?htid='+this.props.hotel.hotelId,options)
           .then((response)=>response.json())
           .then((responseJSON)=>{
             that.props._onUpload(responseJSON);
