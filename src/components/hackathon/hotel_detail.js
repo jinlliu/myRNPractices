@@ -15,6 +15,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Dimensions from 'Dimensions';
 import AddComments from './add_comments';
 import Comment from './comment';
+import ConstURL from './hackathonConst';
 
 var width = Dimensions.get('window').width;
 
@@ -41,7 +42,7 @@ export default class HotelDetail extends Component {
         'Content-Type': 'application/json'
       }
     };
-    return fetch('http://localhost:8090/clarifai/search/commentsByHotel?hotelId='+this.props.hotel.hotelId,opts)
+    return fetch(ConstURL.BaseUrl+'/clarifai/search/commentsByHotel?hotelId='+this.props.hotel.hotelId,opts)
     .then((response)=>response.json())
     .then((responseJSON)=>{
       that.setState({comments:responseJSON});

@@ -25,16 +25,16 @@ export default class Tag extends Component {
       current:false
     }
 
-    this._onTagSelected = this._onTagSelected.bind(this);
+    // this._onTagSelected = this._onTagSelected.bind(this);
   }
 
-  _onTagSelected(){
+  _onTagSelected = () =>{
     let seleted = this.state.selected? false:true;
     this.setState({
       selected:seleted
     });
     this.props.onSelected(this.props.tagName,seleted);
-  }
+  };
 
   render() {
     let seleted = this.state.selected? styles.seleted : styles.tag;
@@ -48,7 +48,6 @@ export default class Tag extends Component {
 }
 
 const styles = StyleSheet.create({
-
   tag:{
     flexDirection:"row",
     justifyContent: 'center',

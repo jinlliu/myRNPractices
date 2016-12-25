@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {
   View,
   Text,
@@ -25,7 +25,7 @@ Tag.propTypes = {
 };
 
 
-class Tags extends React.Component {
+export default class Tags extends Component {
   constructor(props) {
     super(props);
 
@@ -39,12 +39,12 @@ class Tags extends React.Component {
       text: initialText,
     };
 
-    this.onChangeText = this.onChangeText.bind(this);
-    this._onPressHotelSearch = this._onPressHotelSearch.bind(this);
+    // this.onChangeText = this.onChangeText.bind(this);
+    //this._onPressHotelSearch = this._onPressHotelSearch.bind(this);
   }
 
-  onChangeText(text) {
-    if (text.length === 0) {
+  onChangeText = (text) => {
+    if (text.trim().length === 0) {
       /* `onKeyPress` isn't currently supported on Android; I've placed an extra
         space character at the start of `TextInput` which is used to determine if the
         user is erasing.
@@ -63,14 +63,15 @@ class Tags extends React.Component {
       }, () => this.props.onChangeTags && this.props.onChangeTags(this.state.tags));
       ;
     } else {
-      this.setState({ text });
+      this.setState({
+        text: text });
     }
-  }
+  };
 
-  _onPressHotelSearch (){
+  _onPressHotelSearch = () =>{
     console.log(that.state.tags);
-    this.props.onPressHotelSearch(that.state.tags);
-  }
+    this.props.onPressHotelSearch(that.state.text);
+  };
 
   render() {
     return (
@@ -97,6 +98,7 @@ class Tags extends React.Component {
     );
   }
 }
+
 Tags.propTypes = {
   initialText: PropTypes.string,
   initialTags: PropTypes.arrayOf(PropTypes.string),
@@ -156,5 +158,5 @@ const styles = StyleSheet.create({
 });
 
 
-export { Tag };
-export default Tags;
+// export { Tag };
+// export default Tags;

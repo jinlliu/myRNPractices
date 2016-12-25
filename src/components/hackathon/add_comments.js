@@ -18,7 +18,7 @@ import Tag from './tag';
 import ImageResizer from 'react-native-image-resizer';
 import StarRating from 'react-native-star-rating';
 import ImagePicker from 'react-native-image-picker';
-//import ImagePicker from 'react-native-image-crop-picker';
+import ConstURL from './hackathonConst';
 
 var width = Dimensions.get('window').width;
 
@@ -82,7 +82,7 @@ export default class AddComments extends Component {
       let options={};
       options.body = formData;
       options.method='post';
-      return fetch('http://localhost:8090/clarifai/rest/upload?htid='+this.props.hotel.hotelId,options)
+      return fetch(ConstURL.BaseUrl+'/clarifai/rest/upload?htid='+this.props.hotel.hotelId,options)
       .then((response)=>response.json())
       .then((responseJSON)=>{
         that._onUploaded(responseJSON);
@@ -126,7 +126,7 @@ export default class AddComments extends Component {
       })
     };
     console.log(opts);
-    return fetch('http://localhost:8090/clarifai/rest/submit',opts)
+    return fetch(ConstURL.BaseUrl+'/clarifai/rest/submit',opts)
     .then((response)=>response.json())
     .then((responseJSON)=>{
       that.setState({isLoading:false});

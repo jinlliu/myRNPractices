@@ -20,7 +20,7 @@ export default class Hotel extends Component {
     this.props.navigator.push({
       title: this.props.hotel.hotelName,
       component: HotelDetail,
-      passProps: this.props
+      params: this.props
     });
   }
 

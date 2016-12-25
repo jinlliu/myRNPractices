@@ -30,7 +30,7 @@ import HackathonPractice from './src/HackathonPractice';
 // AppRegistry.registerComponent('myRNPractices', () => WebViewPractice);
 
 //comment out following one line to run native rtcwebview practice
-AppRegistry.registerComponent('myRNPractices', () => RTCWebViewPractice);
+//AppRegistry.registerComponent('myRNPractices', () => RTCWebViewPractice);
 
 //comment out following one line to run hackathon practice
-//AppRegistry.registerComponent('myRNPractices', () => HackathonPractice);
+AppRegistry.registerComponent('myRNPractices', () => HackathonPractice);

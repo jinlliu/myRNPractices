@@ -14,6 +14,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Tags from './tags_input';
 import Hotel from './hotel';
 import HotelDetail from './hotel_detail';
+import ConstURL from './hackathonConst';
 
 export default class HotelList extends Component {
   constructor(props){
@@ -23,19 +24,19 @@ export default class HotelList extends Component {
       isLoading: true
       }
     this.fetchHotels();
-    this.fetchHotelsByTag = this.fetchHotelsByTag.bind(this);
-    this.onPressHotelSearch =  this.onPressHotelSearch.bind(this);;
+    // this.fetchHotelsByTag = this.fetchHotelsByTag.bind(this);
+    // this.onPressHotelSearch =  this.onPressHotelSearch.bind(this);;
   }
-  fetchHotels(){
-    var that = this;
-    var opts={
+  fetchHotels = () =>{
+    let that = this;
+    const opts={
       method: 'GET',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
     };
-    return fetch('http://localhost:8090/clarifai/search/hotelByTags',opts)
+    return fetch(ConstURL.BaseUrl+'/clarifai/search/hotelByTags',opts)
     .then((response)=>response.json())
     .then((responseJSON)=>{
       that.setState({hotels:responseJSON});
@@ -45,18 +46,19 @@ export default class HotelList extends Component {
       console.error(error);
       that.setState({isLoading:false});
     })
-  }
-  fetchHotelsByTag(tags){
-    var that = this;
+  };
+
+  fetchHotelsByTag = (tags) =>{
+    let that = this;
     that.setState({isLoading:true});
-    var opts={
+    const opts={
       method: 'GET',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
     };
-    fetch('http://localhost:8090/clarifai/search/hotelByTags?tags='+tags.join(","),opts)
+    fetch(ConstURL.BaseUrl+'/clarifai/search/hotelByTags?tags='+tags,opts)
     .then((response)=>response.json())
     .then((responseJSON)=>{
       console.log(responseJSON);
@@ -67,19 +69,19 @@ export default class HotelList extends Component {
       console.error(error);
       that.setState({isLoading:false});
     })
-  }
+  };
 
-  onChangeTags(e){
+  onChangeTags  = (e) =>{
     console.log("===onTagChange==")
-  }
+  };
 
-  onTagPress(e){
+  onTagPress = (e) =>{
       console.log("===onTagPress==")
-  }
-  onPressHotelSearch(tags){
+  };
+  onPressHotelSearch = (tags) =>{
       console.log("===onSearch====");
       this.fetchHotelsByTag(tags);
-  }
+  };
 
   render() {
     let loading;
